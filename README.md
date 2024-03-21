@@ -33,5 +33,5 @@ The home of scripts common for seda usage.
 
 A lot of the commands depend on:
 
-- (Sedad)[https://github.com/sedaprotocol/seda-chain]
-- (jq)[https://jqlang.github.io/jq/]
+- [Sedad](https://github.com/sedaprotocol/seda-chain)
+- [jq](https://jqlang.github.io/jq/)
