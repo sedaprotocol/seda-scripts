@@ -49,9 +49,9 @@ seda_query_group_policy_info() {
 
 # Creates a group proposal json file
 # Usage: seda_create_group_proposal GROUP_POLICY_ADDR FROM_GROUP_MEM FILE_NAME MSG1 MSG2 ...
-# Requires: SEDA_BINARY, jq
+# Requires: jq
 seda_create_group_proposal() {
-    check_commands $SEDA_BINARY jq
+    check_commands jq
     local group_policy_address="$1"
     local from_group_mem="$2"
     local file_name="$3"
@@ -71,10 +71,10 @@ seda_create_group_proposal() {
     local first=true
     for arg in "${@:4}"; do
         if [ "$first" = true ]; then
-            messages="\"$arg\""
+            messages="$arg"
             first=false
         else
-            messages="$messages, \"$arg\""
+            messages="$messages, $arg"
         fi
     done
 
@@ -82,7 +82,7 @@ seda_create_group_proposal() {
     local json="$json_part_begin$messages$json_part_end"
 
     # Use jq to format the string as proper JSON and save to file
-    echo "$json" | jq . > "$file_name.json"
+    echo $json | jq . > "$file_name.json"
 }
 
 # Queries all proposals of a group by group policy
