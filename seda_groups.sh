@@ -55,7 +55,7 @@ seda_query_group_policy_info() {
 # Usage: seda_create_group_proposal GROUP_POLICY_ADDR FROM_GROUP_MEM FILE_NAME MSG1 MSG2 ...
 # Requires: jq
 seda_create_group_proposal() {
-	# TODO how to usage this one...
+	usage_variadic "${FUNCNAME[0]}" 4 "$#" "GROUP_POLICY_ADDR" "FROM_GROUP_MEM" "FILE_NAME" "MSGS"
 	check_commands jq
 	local group_policy_address="$1"
 	local from_group_mem="$2"

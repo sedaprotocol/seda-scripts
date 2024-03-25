@@ -36,6 +36,24 @@ usage() {
 	fi
 }
 
+# Checks if the script/function was given the correct number of arguments variadic
+# Usage: usage CALLER MINUM_ARGS NUM_OF_ARGS ARG_NAME_1 ARG_NAME_2 ... ARG_NAME_N
+usage_variadic() {
+	caller=$1
+	min_args=$2
+	actual_args=$3
+	shift 3
+	if [ "${actual_args}" -lt "${min_args}" ]; then
+		echo -n "Usage: $caller"
+		while (("$#")); do
+			echo -n " <$1>"
+			shift
+		done
+		echo
+		exit 1
+	fi
+}
+
 # Prints an error message to stderr
 # Usage: error "Error message"
 error() {
@@ -46,6 +64,7 @@ error() {
 # Checks if command(s) exists on the sytem
 # Usage: check_commands COMMAND_NAME_1 COMMAND_NAME_2 ... COMMAND_NAME_N
 check_commands() {
+	usage_variadic "${FUNCNAME[0]}" 1 "$#" "COMMAND_NAMES"
 	local command_names=("$@")
 	local command_unset=false
 	for command_name in "${command_names[@]}"; do
@@ -62,6 +81,7 @@ check_commands() {
 # Checks if env vars are set
 # Usage: check_env_vars VAR_NAME_1 VAR_NAME_2 ... VAR_NAME_N
 check_env_vars() {
+	usage_variadic "${FUNCNAME[0]}" 1 "$#" "VAR_NAMES"
 	local var_names=("$@")
 	local var_unset=false
 	for var_name in "${var_names[@]}"; do
