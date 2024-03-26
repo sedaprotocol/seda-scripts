@@ -5,7 +5,7 @@
 </p>
 
 <h1 align="center">
-  Project Name
+  seda-scripts
 </h1>
 
 <!-- The line below is for once the repo has CI to show build status. -->
@@ -35,3 +35,11 @@ A lot of the commands depend on:
 
 - [Sedad](https://github.com/sedaprotocol/seda-chain)
 - [jq](https://jqlang.github.io/jq/)
+
+# Repo Breakdown
+
+This repo is broken down into three sections:
+
+- libs: Full of functions to be used from scripts. For example, transferring seda.
+- exec: Scripts that will be executed to perform a non-trivial task. For example, a creating a proposal for uploading a WASM file.
+- `common.sh`: sets up some commonly used functions and sets up error handling and etc.
