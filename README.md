@@ -11,10 +11,10 @@
 <!-- The line below is for once the repo has CI to show build status. -->
 <!-- [![Build Status][actions-badge]][actions-url] -->
 
-[![GitHub Stars][github-stars-badge]](https://github.com/sedaprotocol/seda-scripts)
-[![GitHub Contributors][github-contributors-badge]](https://github.com/sedaprotocol/seda-scripts/graphs/contributors)
-[![Discord chat][discord-badge]][discord-url]
-[![Twitter][twitter-badge]][twitter-url]
+<!-- [![GitHub Stars][github-stars-badge]](https://github.com/sedaprotocol/seda-scripts)
+[![GitHub Contributors][github-contributors-badge]](https://github.com/sedaprotocol/seda-scripts/graphs/contributors) -->
+<!-- [![Discord chat][discord-badge]][discord-url]
+[![Twitter][twitter-badge]][twitter-url] -->
 
 <!-- The line below is for once the repo has CI to show build status. -->
 <!-- [actions-badge]: https://github.com/sedaprotocol/seda-scripts/actions/workflows/push.yml/badge.svg -->
