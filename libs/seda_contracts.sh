@@ -5,7 +5,7 @@
 # Grab the directory where this script is located
 SCRIPTS_DIR="$(dirname "$0")"
 # Source common functions
-bash "${SCRIPTS_DIR}/common.sh"
+source "${SCRIPTS_DIR}/../common.sh"
 
 # Queries a contract and outputs the result
 # Usage: smart_query TARGET_CONTRACT QUERY_MSG

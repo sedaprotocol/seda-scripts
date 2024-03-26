@@ -5,9 +5,9 @@
 # Grab the directory where this script is located
 SCRIPTS_DIR="$(dirname "$0")"
 # Source common functions
-source "${SCRIPTS_DIR}/common.sh"
+source "${SCRIPTS_DIR}/../common.sh"
 # Source group functions
-source "${SCRIPTS_DIR}/seda_groups.sh"
+source "${SCRIPTS_DIR}/../libs/seda_groups.sh"
 
 # Creates a group proposal json file for instantiating a contract
 # Usage: seda_store_proposal CODE_ID GROUP_POLICY_ADDR FROM_GROUP_MEM FILE_NAME INSTANTIATE_MSG_JSON

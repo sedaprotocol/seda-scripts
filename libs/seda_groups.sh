@@ -5,7 +5,7 @@
 # Grab the directory where this script is located
 SCRIPTS_DIR="$(dirname "$0")"
 # Source common functions
-bash "${SCRIPTS_DIR}/common.sh"
+source "${SCRIPTS_DIR}/../common.sh"
 
 #  Queries all the groups that a user is an admin of
 # Usage: seda_query_group_admin USER_ADDRESS
